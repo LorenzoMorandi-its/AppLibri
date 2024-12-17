@@ -1,4 +1,4 @@
-package com.example.applibri.Models;
+package com.example.applibri.Activities;
 
 import android.os.Bundle;
 

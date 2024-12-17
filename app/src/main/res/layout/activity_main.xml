@@ -19,7 +19,7 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="100dp"
-            android:background="#cba819" />
+            android:background="@drawable/Legno" />
 
         <!-- Contenuto principale -->
         <LinearLayout
@@ -63,8 +63,10 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="100dp"
-            android:background="#cba819" />
+            android:background="@drawable/Legno" />
     </LinearLayout>
+
+    <!-- Lista di libri
     <ListView
         android:id="@+id/listView"
         android:layout_width="match_parent"
@@ -73,5 +75,6 @@
         android:divider="@android:color/darker_gray"
         android:dividerHeight="1dp"
         android:padding="8dp" />
+    -->
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
 

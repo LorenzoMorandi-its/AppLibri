@@ -13,10 +13,10 @@
         android:theme="@style/Theme.AppLibri"
         tools:targetApi="31">
         <activity
-            android:name=".Models.LoginActivity"
+            android:name=".Activities.LoginActivity"
             android:exported="false" />
         <activity
-            android:name=".Models.RegistrazioneActivity"
+            android:name=".Activities.RegistrazioneActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
