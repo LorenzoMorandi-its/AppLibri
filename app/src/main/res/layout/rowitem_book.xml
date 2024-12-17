@@ -1,28 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:padding="8dp">
+    android:orientation="horizontal"
+    android:padding="16dp">
 
-    <!-- Titolo del Libro -->
-    <TextView
-        android:id="@+id/titoloTextView"
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Titolo del libro"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/textViewAuthor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Autore"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/buttonReview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Titolo"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:textColor="#000000" />
-
-    <!-- Autore del Libro -->
-    <TextView
-        android:id="@+id/autoreTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Autore"
-        android:textSize="14sp"
-        android:textColor="#555555" />
+        android:text="Scrivi recensione" />
 
 </LinearLayout>
