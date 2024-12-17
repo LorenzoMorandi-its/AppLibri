@@ -27,7 +27,8 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:orientation="vertical"
-            android:gravity="top|center">
+            android:gravity="top|center"
+            android:layout_marginTop="70dp">
 
             <EditText
                 android:id="@+id/editText_nome"
@@ -45,7 +46,7 @@
             <!-- Spaziatura -->
             <View
                 android:layout_width="match_parent"
-                android:layout_height="30dp" />
+                android:layout_height="40dp" />
 
             <!-- TextBox-->
             <EditText
@@ -60,6 +61,21 @@
                 android:textColor="#000000"
                 android:textColorHint="#808080"
                 android:inputType="textPersonName" />
+
+            <!-- Spaziatura -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="60dp" />
+            <Button
+                android:id="@+id/button_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:backgroundTint="#D2B48C"
+                android:padding="25dp"
+                android:textSize="30dp"
+                android:text="ACCEDI!"
+                android:textColor="#000000" />
         </LinearLayout>
 
         <!-- Barra inferiore marrone -->
