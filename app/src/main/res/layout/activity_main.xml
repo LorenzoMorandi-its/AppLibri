@@ -50,7 +50,6 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Contenitore 1"
                         android:textSize="18sp"
                         android:textStyle="bold"
                         android:textColor="#000000"/>
@@ -74,7 +73,6 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Contenitore 2"
                         android:textSize="18sp"
                         android:textStyle="bold"
                         android:textColor="#000000"/>
@@ -108,7 +106,6 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Contenitore 3"
                         android:textSize="18sp"
                         android:textStyle="bold"
                         android:textColor="#000000"/>
