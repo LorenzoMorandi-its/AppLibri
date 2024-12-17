@@ -65,5 +65,13 @@
             android:layout_height="100dp"
             android:background="#cba819" />
     </LinearLayout>
-
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="1dp"
+        android:padding="8dp" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
