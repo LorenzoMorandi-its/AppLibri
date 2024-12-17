@@ -39,7 +39,6 @@
                 android:background="#D2B48C"
                 android:padding="25dp"
                 android:textSize="30sp"
-                android:textColor="#000000"
                 android:textColorHint="#808080"
                 android:inputType="textPersonName" />
 
@@ -58,7 +57,6 @@
                 android:background="#D2B48C"
                 android:padding="25dp"
                 android:textSize="30sp"
-                android:textColor="#000000"
                 android:textColorHint="#808080"
                 android:inputType="textPersonName" />
 
