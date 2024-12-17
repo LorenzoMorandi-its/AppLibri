@@ -27,36 +27,39 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:orientation="vertical"
-            android:gravity="center">
+            android:gravity="top|center_vertical">
 
-            <!-- Pulsante Registrazione -->
-            <Button
-                android:id="@+id/button_registrazione"
+            <EditText
+                android:id="@+id/editText_nome"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:hint="Email"
                 android:textStyle="bold"
-                android:backgroundTint="#D2B48C"
+                android:background="#D2B48C"
                 android:padding="25dp"
-                android:textSize="30dp"
-                android:text="REGISTRAZIONE"
-                android:textColor="#000000" />
+                android:textSize="30sp"
+                android:textColor="#000000"
+                android:textColorHint="#808080"
+                android:inputType="textPersonName" />
 
             <!-- Spaziatura -->
             <View
                 android:layout_width="match_parent"
                 android:layout_height="30dp" />
 
-            <!-- Pulsante Login -->
-            <Button
-                android:id="@+id/button_login"
+            <!-- TextBox-->
+            <EditText
+                android:id="@+id/editText_nome"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:hint="Password"
                 android:textStyle="bold"
-                android:backgroundTint="#D2B48C"
+                android:background="#D2B48C"
                 android:padding="25dp"
-                android:textSize="30dp"
-                android:text="LOGIN"
-                android:textColor="#000000" />
+                android:textSize="30sp"
+                android:textColor="#000000"
+                android:textColorHint="#808080"
+                android:inputType="textPersonName" />
         </LinearLayout>
 
         <!-- Barra inferiore marrone -->
