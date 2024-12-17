@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context=".MainActivity">
+    tools:context=".Activities.LoginActivity">
 
-    <?xml version="1.0" encoding="utf-8"?>
     <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -19,7 +19,7 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="100dp"
-            android:background="@drawable/Legno" />
+            android:background="@drawable/legno" />
 
         <!-- Contenuto principale -->
         <LinearLayout
@@ -27,57 +27,57 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:orientation="vertical"
-            android:gravity="top|center"
+            android:gravity="center"
             android:layout_marginTop="100dp">
 
+            <!-- Campo Email -->
             <EditText
-                android:id="@+id/editText_nome"
-                android:layout_width="wrap_content"
+                android:id="@+id/editText_email"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Email"
                 android:textStyle="bold"
-                android:background="@drawable/Legno2"
+                android:background="@drawable/legno2"
                 android:padding="25dp"
-                android:textSize="30sp"
+                android:textSize="20sp"
                 android:textColor="#000000"
                 android:textColorHint="#808080"
-                android:inputType="textPersonName" />
+                android:inputType="textEmailAddress" />
 
             <!-- Spaziatura -->
             <View
                 android:layout_width="match_parent"
-                android:layout_height="40dp" />
+                android:layout_height="20dp" />
 
-            <!-- TextBox-->
-            <!-- TextBox-->
+            <!-- Campo Password -->
             <EditText
-                android:id="@+id/editText_nome"
-                android:layout_width="wrap_content"
+                android:id="@+id/editText_password"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Password"
                 android:textStyle="bold"
-                android:background="#D2B48C"
+                android:background="@drawable/legno2"
                 android:padding="25dp"
-                android:textSize="30sp"
+                android:textSize="20sp"
                 android:textColor="#000000"
                 android:textColorHint="#808080"
-                android:inputType="textPersonName" />
+                android:inputType="textPassword" />
 
             <!-- Spaziatura -->
             <View
                 android:layout_width="match_parent"
-                android:layout_height="40dp" />
+                android:layout_height="20dp" />
 
-            <!-- Pulsante Registrazione -->
+            <!-- Pulsante Login -->
             <Button
-                android:id="@+id/button_registrati"
-                android:layout_width="wrap_content"
+                android:id="@+id/button_login"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
-                android:background="@drawable/LegnoGiallo"
+                android:background="@drawable/legno3"
                 android:padding="25dp"
-                android:textSize="30dp"
-                android:text="REGISTRATI!"
+                android:textSize="20sp"
+                android:text="ACCEDI"
                 android:textColor="#000000" />
         </LinearLayout>
 
@@ -85,7 +85,6 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="100dp"
-            android:background="@drawable/Legno" />
+            android:background="@drawable/legno" />
     </LinearLayout>
-
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

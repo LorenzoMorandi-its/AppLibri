@@ -1,25 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context=".MainActivity">
+    tools:context=".Activities.RegistrazioneActivity">
 
-    <?xml version="1.0" encoding="utf-8"?>
+    <!-- Layout principale che contiene tutti gli elementi -->
     <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/layout_root"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:background="#000000">
+        android:background="#000000"
+        android:paddingTop="50dp">
 
         <!-- Barra superiore marrone -->
         <View
             android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:background="@drawable/Legno"/>
+            android:layout_height="100dp" />
 
         <!-- Contenuto principale -->
         <LinearLayout
@@ -27,83 +28,65 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:orientation="vertical"
-            android:gravity="center">
+            android:gravity="top|center">
 
+            <!-- Email -->
             <EditText
-                android:id="@+id/editText_nome"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:hint="Nome"
-                android:textStyle="bold"
-                android:background="#D2B48C"
-                android:padding="25dp"
-                android:textSize="30sp"
-                android:textColor="#000000"
-                android:textColorHint="#808080"
-                android:inputType="textPersonName" />
-
-            <!-- Spaziatura -->
-            <View
+                android:id="@+id/editText_email"
                 android:layout_width="match_parent"
-                android:layout_height="30dp" />
-
-            <!-- TextBox-->
-            <EditText
-                android:id="@+id/editText_nome"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:hint="Cognome"
-                android:textStyle="bold"
-                android:background="#D2B48C"
-                android:padding="25dp"
-                android:textSize="30sp"
-                android:textColor="#000000"
-                android:textColorHint="#808080"
-                android:inputType="textPersonName" />
-
-            <!-- Spaziatura -->
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="30dp" />
-
-            <!-- TextBox-->
-            <EditText
-                android:id="@+id/editText_nome"
-                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:hint="Email"
                 android:textStyle="bold"
-                android:background="#D2B48C"
                 android:padding="25dp"
-                android:textSize="30sp"
+                android:textSize="20sp"
                 android:textColor="#000000"
                 android:textColorHint="#808080"
-                android:inputType="textPersonName" />
+                android:inputType="textEmailAddress" />
 
+            <!-- Spaziatura -->
             <View
                 android:layout_width="match_parent"
                 android:layout_height="30dp" />
 
-            <!-- TextBox-->
+            <!-- Password -->
             <EditText
-                android:id="@+id/editText_nome"
-                android:layout_width="wrap_content"
+                android:id="@+id/editText_password"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Nuova Password"
+                android:hint="Password"
                 android:textStyle="bold"
-                android:background="#D2B48C"
+                android:background="@drawable/legno2"
                 android:padding="25dp"
-                android:textSize="30sp"
+                android:textSize="20sp"
                 android:textColor="#000000"
                 android:textColorHint="#808080"
-                android:inputType="textPersonName" />
+                android:inputType="textPassword" />
+
+            <!-- Spaziatura -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+
+            <!-- Pulsante Registrazione -->
+            <Button
+                android:id="@+id/button_registrati"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:background="@drawable/legno3"
+                android:padding="25dp"
+                android:textSize="25sp"
+                android:text="REGISTRATI!"
+                android:textColor="#000000" />
+
         </LinearLayout>
 
         <!-- Barra inferiore marrone -->
         <View
             android:layout_width="match_parent"
             android:layout_height="100dp"
-            android:background="@drawable/Legno" />
+            android:background="@drawable/legno" />
+
     </LinearLayout>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

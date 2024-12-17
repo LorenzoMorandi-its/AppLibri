@@ -1,13 +1,10 @@
 package com.example.applibri.Activities;
 
+import android.content.Intent;
 import android.os.Bundle;
-
-import androidx.activity.EdgeToEdge;
+import android.view.View;
+import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
-
 import com.example.applibri.R;
 
 public class PaginaInizialeActivity extends AppCompatActivity {
@@ -15,12 +12,25 @@ public class PaginaInizialeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_pagina_iniziale);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
+
+        Button btnRegistrati = findViewById(R.id.button_registrati);
+        Button btnAccedi = findViewById(R.id.button_accedi);
+
+        btnRegistrati.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(PaginaInizialeActivity.this, RegistrazioneActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btnAccedi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(PaginaInizialeActivity.this, LoginActivity.class);
+                startActivity(intent);
+            }
         });
     }
 }
