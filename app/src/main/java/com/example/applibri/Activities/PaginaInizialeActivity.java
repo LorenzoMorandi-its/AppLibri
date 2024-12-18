@@ -14,23 +14,23 @@ public class PaginaInizialeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pagina_iniziale);
 
-        Button btnRegistrati = findViewById(R.id.button_registrati);
-        Button btnAccedi = findViewById(R.id.button_accedi);
+        //Button btnRegistrati = findViewById(R.id.button_registrati);
+       // Button btnAccedi = findViewById(R.id.button_accedi);
 
-        btnRegistrati.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(PaginaInizialeActivity.this, RegistrazioneActivity.class);
-                startActivity(intent);
+        //btnRegistrati.setOnClickListener(new View.OnClickListener() {
+            //@Override
+            //public void onClick(View v) {
+                //Intent intent = new Intent(PaginaInizialeActivity.this, RegistrazioneActivity.class);
+                //startActivity(intent);
             }
-        });
+        //});
 
-        btnAccedi.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(PaginaInizialeActivity.this, LoginActivity.class);
-                startActivity(intent);
+       // btnAccedi.setOnClickListener(new View.OnClickListener() {
+            //@Override
+            //public void onClick(View v) {
+                //Intent intent = new Intent(PaginaInizialeActivity.this, LoginActivity.class);
+                //startActivity(intent);
             }
-        });
+        //});
     }
-}
+//}

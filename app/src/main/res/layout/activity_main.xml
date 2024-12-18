@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -13,30 +14,11 @@
         android:orientation="vertical"
         android:background="#000000">
 
-        <FrameLayout
+        <!-- Barra superiore marrone -->
+        <View
             android:layout_width="match_parent"
-            android:layout_height="100dp">
-
-            <!-- Sfondo marrone -->
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/legno"
-                />
-
-            <!-- Icona della ricerca in alto a sinistra -->
-            <ImageView
-                android:layout_width="76dp"
-                android:layout_height="75dp"
-                android:layout_gravity="start|top"
-                android:src="@drawable/ricerca" />
-
-            <ImageView
-                android:layout_width="78dp"
-                android:layout_height="79dp"
-                android:layout_gravity="end|top"
-                android:src="@drawable/persona" />
-        </FrameLayout>
+            android:layout_height="100dp"
+            android:background="@drawable/legno" />
 
         <!-- Contenuto principale -->
         <LinearLayout
@@ -54,7 +36,7 @@
                 android:textStyle="bold"
                 android:backgroundTint="#D2B48C"
                 android:padding="25dp"
-                android:textSize="30dp"
+                android:textSize="30sp"
                 android:text="REGISTRAZIONE"
                 android:textColor="#000000" />
 
@@ -71,51 +53,53 @@
                 android:textStyle="bold"
                 android:backgroundTint="#D2B48C"
                 android:padding="25dp"
-                android:textSize="30dp"
+                android:textSize="30sp"
                 android:text="LOGIN"
                 android:textColor="#000000" />
         </LinearLayout>
 
-        <FrameLayout
+        <!-- Barra inferiore marrone -->
+        <View
             android:layout_width="match_parent"
-            android:layout_height="100dp">
-
-            <!-- Sfondo marrone -->
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/legno"
-                />
-
-            <!-- Icona della ricerca in alto a sinistra -->
-            <ImageView
-                android:layout_width="76dp"
-                android:layout_height="75dp"
-                android:layout_gravity="start|top"
-                android:src="@drawable/casa" />
-            <ImageView
-                android:layout_width="88dp"
-                android:layout_height="match_parent"
-                android:layout_gravity="center|top"
-                android:src="@drawable/cuore" />
-
-            <ImageView
-                android:layout_width="88dp"
-                android:layout_height="match_parent"
-                android:layout_gravity="end|top"
-                android:src="@drawable/logo" />
-        </FrameLayout>
+            android:layout_height="100dp"
+            android:background="@drawable/legno" />
     </LinearLayout>
 
-
+    <!-- Lista dei libri -->
     <ListView
         android:id="@+id/listView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="?attr/actionBarSize"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:divider="@android:color/darker_gray"
         android:dividerHeight="1dp"
         android:padding="8dp" />
 
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+    <!-- ProgressBar e TextView per la percentuale -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_gravity="bottom"
+        android:padding="16dp">
 
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_marginEnd="8dp"
+            android:progress="0"
+            android:max="100" />
+
+        <TextView
+            android:id="@+id/textViewPercentage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0%"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
