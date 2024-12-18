@@ -5,32 +5,24 @@
     android:orientation="horizontal"
     android:padding="16dp">
 
-    <LinearLayout
+    <TextView
+        android:id="@+id/textViewTitle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:orientation="vertical">
+        android:text="Title"
+        android:textSize="18sp" />
 
-        <TextView
-            android:id="@+id/textViewTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Titolo del libro"
-            android:textSize="16sp" />
-
-        <TextView
-            android:id="@+id/textViewAuthor"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Autore"
-            android:textSize="14sp" />
-
-    </LinearLayout>
+    <TextView
+        android:id="@+id/textViewAuthor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Author"
+        android:textSize="16sp" />
 
     <Button
         android:id="@+id/buttonReview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Scrivi recensione" />
-
+        android:text="Review" />
 </LinearLayout>

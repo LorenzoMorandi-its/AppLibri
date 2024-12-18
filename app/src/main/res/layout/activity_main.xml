@@ -8,19 +8,20 @@
     android:fitsSystemWindows="true"
     tools:context=".MainActivity">
 
+    <!-- Main layout with vertical orientation -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:background="#000000">
 
-        <!-- Barra superiore marrone -->
+        <!-- Upper brown bar (top header) -->
         <View
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:background="@drawable/legno" />
 
-        <!-- Contenuto principale -->
+        <!-- Main content with buttons for Registration and Login -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -28,7 +29,7 @@
             android:orientation="vertical"
             android:gravity="center">
 
-            <!-- Pulsante Registrazione -->
+            <!-- Registration button
             <Button
                 android:id="@+id/button_registrazione"
                 android:layout_width="wrap_content"
@@ -39,13 +40,13 @@
                 android:textSize="30sp"
                 android:text="REGISTRAZIONE"
                 android:textColor="#000000" />
-
-            <!-- Spaziatura -->
+            -->
+                        <!-- Spacer between buttons -->
             <View
                 android:layout_width="match_parent"
                 android:layout_height="30dp" />
 
-            <!-- Pulsante Login -->
+            <!-- Login button
             <Button
                 android:id="@+id/button_login"
                 android:layout_width="wrap_content"
@@ -56,26 +57,24 @@
                 android:textSize="30sp"
                 android:text="LOGIN"
                 android:textColor="#000000" />
+                -->
         </LinearLayout>
 
-        <!-- Barra inferiore marrone -->
+        <!-- Bottom brown bar (footer) -->
         <View
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:background="@drawable/legno" />
     </LinearLayout>
 
-    <!-- Lista dei libri -->
+    <!-- ListView to display books -->
+
     <ListView
         android:id="@+id/listView"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:divider="@android:color/darker_gray"
-        android:dividerHeight="1dp"
-        android:padding="8dp" />
+        android:layout_height="match_parent" />
 
-    <!-- ProgressBar e TextView per la percentuale -->
+    <!-- ProgressBar and TextView for percentage display -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -84,15 +83,17 @@
         android:layout_gravity="bottom"
         android:padding="16dp">
 
+        <!-- ProgressBar for reading progress -->
         <ProgressBar
             android:id="@+id/progressBar"
-            android:layout_width="wrap_content"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             style="?android:attr/progressBarStyleHorizontal"
             android:layout_marginEnd="8dp"
             android:progress="0"
             android:max="100" />
 
+        <!-- TextView to show progress percentage -->
         <TextView
             android:id="@+id/textViewPercentage"
             android:layout_width="wrap_content"
