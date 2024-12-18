@@ -15,13 +15,13 @@
         android:orientation="vertical"
         android:background="#000000">
 
-        <!-- Barra superiore marrone -->
+
         <View
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:background="@drawable/legno" />
 
-        <!-- Contenuto principale -->
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -30,7 +30,7 @@
             android:gravity="center"
             android:layout_marginTop="100dp">
 
-            <!-- Campo Email -->
+
             <EditText
                 android:id="@+id/editText_email"
                 android:layout_width="match_parent"
@@ -44,12 +44,12 @@
                 android:textColorHint="#808080"
                 android:inputType="textEmailAddress" />
 
-            <!-- Spaziatura -->
+
             <View
                 android:layout_width="match_parent"
                 android:layout_height="20dp" />
 
-            <!-- Campo Password -->
+
             <EditText
                 android:id="@+id/editText_password"
                 android:layout_width="match_parent"
@@ -63,12 +63,11 @@
                 android:textColorHint="#808080"
                 android:inputType="textPassword" />
 
-            <!-- Spaziatura -->
+
             <View
                 android:layout_width="match_parent"
                 android:layout_height="20dp" />
 
-            <!-- Pulsante Login -->
             <Button
                 android:id="@+id/button_login"
                 android:layout_width="match_parent"

@@ -8,7 +8,6 @@
     android:fitsSystemWindows="true"
     tools:context=".Activities.RegistrazioneActivity">
 
-    <!-- Layout principale che contiene tutti gli elementi -->
     <LinearLayout
         android:id="@+id/layout_root"
         android:layout_width="match_parent"
@@ -17,12 +16,12 @@
         android:background="#000000"
         android:paddingTop="50dp">
 
-        <!-- Barra superiore marrone -->
+
         <View
             android:layout_width="match_parent"
             android:layout_height="100dp" />
 
-        <!-- Contenuto principale -->
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -30,7 +29,7 @@
             android:orientation="vertical"
             android:gravity="top|center">
 
-            <!-- Email -->
+
             <EditText
                 android:id="@+id/editText_email"
                 android:layout_width="match_parent"
@@ -43,12 +42,12 @@
                 android:textColorHint="#808080"
                 android:inputType="textEmailAddress" />
 
-            <!-- Spaziatura -->
+
             <View
                 android:layout_width="match_parent"
                 android:layout_height="30dp" />
 
-            <!-- Password -->
+
             <EditText
                 android:id="@+id/editText_password"
                 android:layout_width="match_parent"
@@ -62,12 +61,12 @@
                 android:textColorHint="#808080"
                 android:inputType="textPassword" />
 
-            <!-- Spaziatura -->
+
             <View
                 android:layout_width="match_parent"
                 android:layout_height="30dp" />
 
-            <!-- Pulsante Registrazione -->
+
             <Button
                 android:id="@+id/button_registrati"
                 android:layout_width="match_parent"
@@ -81,7 +80,7 @@
 
         </LinearLayout>
 
-        <!-- Barra inferiore marrone -->
+
         <View
             android:layout_width="match_parent"
             android:layout_height="100dp"

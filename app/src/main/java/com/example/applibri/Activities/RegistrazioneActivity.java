@@ -15,10 +15,10 @@ public class RegistrazioneActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registrazione);
 
-        // Trova il contenitore principale (layout_root)
+
         LinearLayout layout = findViewById(R.id.layout_root);
 
-        // Applica i padding per la barra di sistema (barra di stato)
+
         ViewCompat.setOnApplyWindowInsetsListener(layout, (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);

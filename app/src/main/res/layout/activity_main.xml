@@ -14,13 +14,13 @@
         android:orientation="vertical"
         android:background="#000000">
 
-        <!-- Barra superiore marrone -->
+
         <View
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:background="@drawable/legno" />
 
-        <!-- Contenuto principale -->
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -28,7 +28,7 @@
             android:orientation="vertical"
             android:gravity="center">
 
-            <!-- Pulsante Registrazione -->
+
             <Button
                 android:id="@+id/button_registrazione"
                 android:layout_width="wrap_content"
@@ -40,12 +40,12 @@
                 android:text="REGISTRAZIONE"
                 android:textColor="#000000" />
 
-            <!-- Spaziatura -->
+
             <View
                 android:layout_width="match_parent"
                 android:layout_height="30dp" />
 
-            <!-- Pulsante Login -->
+
             <Button
                 android:id="@+id/button_login"
                 android:layout_width="wrap_content"
@@ -58,7 +58,7 @@
                 android:textColor="#000000" />
         </LinearLayout>
 
-        <!-- Barra inferiore marrone -->
+
         <View
             android:layout_width="match_parent"
             android:layout_height="100dp"
@@ -74,6 +74,37 @@
         android:divider="@android:color/darker_gray"
         android:dividerHeight="1dp"
         android:padding="8dp" />
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Altri elementi del layout -->
+
+        <TextView
+            android:id="@+id/textViewProgress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Progresso lettura settimanale:" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:progress="0"
+            android:max="100"
+            style="?android:attr/progressBarStyleHorizontal" />
+
+        <TextView
+            android:id="@+id/textViewPercentage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0%" />
+
+    </LinearLayout>
+
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
 

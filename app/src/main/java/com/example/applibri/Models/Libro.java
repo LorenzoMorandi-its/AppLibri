@@ -15,7 +15,7 @@ public class Libro {
         this.pagine = pagine;
     }
 
-    // Getter e Setter per 'titolo'
+
     public String getTitolo() {
         return titolo;
     }
@@ -24,7 +24,7 @@ public class Libro {
         this.titolo = titolo;
     }
 
-    // Getter e Setter per 'autore'
+
     public String getAutore() {
         return autore;
     }
@@ -33,7 +33,7 @@ public class Libro {
         this.autore = autore;
     }
 
-    // Getter e Setter per 'descrizione'
+
     public String getDescrizione() {
         return descrizione;
     }
@@ -42,7 +42,7 @@ public class Libro {
         this.descrizione = descrizione;
     }
 
-    // Getter e Setter per 'pagine'
+
     public int getPagine() {
         return pagine;
     }
