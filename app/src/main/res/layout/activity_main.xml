@@ -8,7 +8,6 @@
     tools:context=".MainActivity">
 
     <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -21,50 +20,104 @@
             android:background="@drawable/legno" />
 
         <!-- Contenuto principale -->
+
+        <!-- Barra inferiore marrone -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:orientation="vertical"
-            android:gravity="center">
+            android:gravity="center"
+            android:orientation="vertical">
 
-            <!-- Pulsante Registrazione -->
-            <Button
-                android:id="@+id/button_registrazione"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textStyle="bold"
-                android:backgroundTint="#D2B48C"
-                android:padding="25dp"
-                android:textSize="30dp"
-                android:text="REGISTRAZIONE"
-                android:textColor="#000000" />
-
-            <!-- Spaziatura -->
-            <View
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="30dp" />
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:backgroundTint="#000000">
 
-            <!-- Pulsante Login -->
-            <Button
-                android:id="@+id/button_login"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textStyle="bold"
-                android:backgroundTint="#D2B48C"
-                android:padding="25dp"
-                android:textSize="30dp"
-                android:text="LOGIN"
-                android:textColor="#000000" />
+                <!-- Primo contenitore -->
+                <LinearLayout
+                    android:id="@+id/container1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/legno2"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <!-- Contenuto del primo contenitore -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="#000000"/>
+                </LinearLayout>
+
+                <!-- Spaziatura -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp" />
+
+                <!-- Secondo contenitore -->
+                <LinearLayout
+                    android:id="@+id/container2"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/legno2"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="#000000"/>
+                </LinearLayout>
+
+                <!-- Spaziatura -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="LIBRI PREFERITI"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- Terzo contenitore -->
+                <LinearLayout
+                    android:id="@+id/container3"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/legno2"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="#000000"/>
+                </LinearLayout>
+            </LinearLayout>
         </LinearLayout>
 
-        <!-- Barra inferiore marrone -->
         <View
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:background="@drawable/legno" />
     </LinearLayout>
-
 
     <ListView
         android:id="@+id/listView"
