@@ -8,17 +8,35 @@
     tools:context=".MainActivity">
 
     <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:background="#000000">
 
-        <!-- Barra superiore marrone -->
-        <View
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:background="@drawable/legno" />
+            android:layout_height="100dp">
+
+            <!-- Sfondo marrone -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/legno"
+                />
+
+            <!-- Icona della ricerca in alto a sinistra -->
+            <ImageView
+                android:layout_width="76dp"
+                android:layout_height="75dp"
+                android:layout_gravity="start|top"
+                android:src="@drawable/ricerca" />
+
+            <ImageView
+                android:layout_width="78dp"
+                android:layout_height="79dp"
+                android:layout_gravity="end|top"
+                android:src="@drawable/persona" />
+        </FrameLayout>
 
         <!-- Contenuto principale -->
         <LinearLayout
@@ -58,11 +76,35 @@
                 android:textColor="#000000" />
         </LinearLayout>
 
-        <!-- Barra inferiore marrone -->
-        <View
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:background="@drawable/legno" />
+            android:layout_height="100dp">
+
+            <!-- Sfondo marrone -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/legno"
+                />
+
+            <!-- Icona della ricerca in alto a sinistra -->
+            <ImageView
+                android:layout_width="76dp"
+                android:layout_height="75dp"
+                android:layout_gravity="start|top"
+                android:src="@drawable/casa" />
+            <ImageView
+                android:layout_width="88dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center|top"
+                android:src="@drawable/cuore" />
+
+            <ImageView
+                android:layout_width="88dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="end|top"
+                android:src="@drawable/logo" />
+        </FrameLayout>
     </LinearLayout>
 
 
