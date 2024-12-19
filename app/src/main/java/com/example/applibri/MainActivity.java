@@ -64,7 +64,12 @@ public class MainActivity extends AppCompatActivity {
     private void popolaListaLibri() {
         listaLibri.add(new Libro("Il nome della rosa", "Umberto Eco", "Un giallo storico", 500));
         listaLibri.add(new Libro("1984", "George Orwell", "Un distopico capolavoro", 328));
-        // Aggiungi altri libri...
+        listaLibri.add(new Libro("Orgoglio e pregiudizio", "Jane Austen", "Un classico della letteratura romantica", 432));
+        listaLibri.add(new Libro("Il signore degli anelli", "J.R.R. Tolkien", "Un'epica avventura fantasy", 1178));
+        listaLibri.add(new Libro("Cime tempestose", "Emily Brontë", "Un'appassionante storia d'amore e vendetta", 416));
+        listaLibri.add(new Libro("Il grande Gatsby", "F. Scott Fitzgerald", "Un ritratto della società americana degli anni '20", 180));
+        listaLibri.add(new Libro("Harry Potter e la pietra filosofale", "J.K. Rowling", "L'inizio di una magica saga", 223));
+
     }
 
     private void inizializzaGiorni() {
