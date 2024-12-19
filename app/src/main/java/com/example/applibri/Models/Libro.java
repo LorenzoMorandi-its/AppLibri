@@ -6,6 +6,10 @@ public class Libro {
     private String autore;
     private String descrizione;
     private int pagine;
+    private String recensione;
+
+
+
 
 
     public Libro(String titolo, String autore, String descrizione, int pagine) {
@@ -47,7 +51,11 @@ public class Libro {
         return pagine;
     }
 
-    public void setPagine(int pagine) {
-        this.pagine = pagine;
+    public String getRecensione() {
+        return recensione;
+    }
+
+    public void setRecensione(String recensione) {
+        this.recensione = recensione;
     }
 }

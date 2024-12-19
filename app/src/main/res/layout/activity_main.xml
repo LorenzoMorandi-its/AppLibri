@@ -8,99 +8,154 @@
     android:fitsSystemWindows="true"
     tools:context=".MainActivity">
 
-    <!-- Main layout with vertical orientation -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:background="#000000">
 
-        <!-- Upper brown bar (top header) -->
-        <View
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:background="@drawable/legno" />
+            android:layout_height="100dp">
 
-        <!-- Main content with buttons for Registration and Login -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/legno" />
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="start|top"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="60dp"
+                android:src="@drawable/ricerca" />
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="end|top"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="60dp"
+                android:src="@drawable/logo" />
+        </FrameLayout>
+
+        <!-- Main Content -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
+            android:gravity="center"
             android:orientation="vertical"
-            android:gravity="center">
+            android:padding="16dp"
+            android:backgroundTint="#000000">
 
-            <!-- Registration button
-            <Button
-                android:id="@+id/button_registrazione"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textStyle="bold"
-                android:backgroundTint="#D2B48C"
-                android:padding="25dp"
-                android:textSize="30sp"
-                android:text="REGISTRAZIONE"
-                android:textColor="#000000" />
-            -->
-                        <!-- Spacer between buttons -->
+            <!-- First Container -->
+            <LinearLayout
+                android:id="@+id/container1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/legno2"
+                android:orientation="vertical"
+                android:padding="8dp">
+            </LinearLayout>
+
             <View
                 android:layout_width="match_parent"
                 android:layout_height="30dp" />
 
-            <!-- Login button
-            <Button
-                android:id="@+id/button_login"
+            <!-- Second Container -->
+            <LinearLayout
+                android:id="@+id/container2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/legno2"
+                android:orientation="vertical"
+                android:padding="8dp">
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textStyle="bold"
-                android:backgroundTint="#D2B48C"
-                android:padding="25dp"
+                android:layout_gravity="center_horizontal"
+                android:text="LIBRI PREFERITI"
                 android:textSize="30sp"
-                android:text="LOGIN"
-                android:textColor="#000000" />
-                -->
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Third Container -->
+            <LinearLayout
+                android:id="@+id/container3"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/legno2"
+                android:orientation="vertical"
+                android:padding="8dp">
+            </LinearLayout>
+
+            <!-- ProgressBar for weekly reading goal -->
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:progress="0"
+                android:max="100" />
+
+            <!-- TextView to display progress percentage -->
+            <TextView
+                android:id="@+id/textViewPercentage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="0%"
+                android:textSize="18sp"
+                android:textColor="#FFFFFF" />
         </LinearLayout>
 
-        <!-- Bottom brown bar (footer) -->
-        <View
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:background="@drawable/legno" />
-    </LinearLayout>
+            android:layout_height="100dp">
 
-    <!-- ListView to display books -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/legno" />
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="start|top"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="60dp"
+                android:src="@drawable/casa" />
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="end|top"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="60dp"
+                android:src="@drawable/cuore" />
+        </FrameLayout>
+    </LinearLayout>
 
     <ListView
         android:id="@+id/listView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-
-    <!-- ProgressBar and TextView for percentage display -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center"
-        android:layout_gravity="bottom"
-        android:padding="16dp">
-
-        <!-- ProgressBar for reading progress -->
-        <ProgressBar
-            android:id="@+id/progressBar"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            style="?android:attr/progressBarStyleHorizontal"
-            android:layout_marginEnd="8dp"
-            android:progress="0"
-            android:max="100" />
-
-        <!-- TextView to show progress percentage -->
-        <TextView
-            android:id="@+id/textViewPercentage"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="0%"
-            android:textColor="#FFFFFF"
-            android:textSize="18sp" />
-    </LinearLayout>
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="1dp"
+        android:padding="8dp" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -2,27 +2,41 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="horizontal"
+    android:orientation="vertical"
     android:padding="16dp">
 
+    <!-- Titolo del libro -->
     <TextView
         android:id="@+id/textViewTitle"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="Title"
-        android:textSize="18sp" />
+        android:text="Titolo del libro"
+        android:textSize="18sp"
+        android:textColor="#000000" />
 
+    <!-- Autore del libro -->
     <TextView
         android:id="@+id/textViewAuthor"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Author"
-        android:textSize="16sp" />
+        android:text="Autore del libro"
+        android:textSize="14sp"
+        android:textColor="#666666" />
 
+    <!-- Recensione del libro -->
+    <TextView
+        android:id="@+id/textViewReview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nessuna recensione"
+        android:textSize="14sp"
+        android:textColor="#666" />
+
+
+    <!-- Pulsante per aggiungere una recensione -->
     <Button
         android:id="@+id/buttonReview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Review" />
+        android:text="Aggiungi recensione" />
 </LinearLayout>

@@ -18,6 +18,9 @@ public class ReviewActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_review);
 
+
+
+
         reviewEditText = findViewById(R.id.editTextReview);
         submitButton = findViewById(R.id.buttonSubmit);
 
