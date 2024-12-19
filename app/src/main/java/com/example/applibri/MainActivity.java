@@ -5,11 +5,13 @@ import android.os.Bundle;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.applibri.Adapter.BookAdapter;
 import com.example.applibri.Models.Libro;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -25,7 +27,6 @@ public class MainActivity extends AppCompatActivity {
     private Map<String, Integer> pagineLetteGiornaliere;
     private int obiettivoSettimanale = 350;
 
-
     private ActivityResultLauncher<Intent> reviewActivityLauncher;
 
     @Override
@@ -38,11 +39,11 @@ public class MainActivity extends AppCompatActivity {
                 result -> {
                     if (result.getResultCode() == RESULT_OK && result.getData() != null) {
                         String recensione = result.getData().getStringExtra("recensione");
-                        aggiungiRecensione(recensione);
+                        float rating = result.getData().getFloatExtra("rating", 0);
+                        aggiungiRecensione(recensione, rating);
                     }
                 }
         );
-
 
         listView = findViewById(R.id.listView);
         listaLibri = new ArrayList<>();
@@ -51,35 +52,20 @@ public class MainActivity extends AppCompatActivity {
         adapter = new BookAdapter(this, listaLibri);
         listView.setAdapter(adapter);
 
-
         progressBar = findViewById(R.id.progressBar);
         textViewPercentage = findViewById(R.id.textViewPercentage);
-
 
         pagineLetteGiornaliere = new HashMap<>();
         inizializzaGiorni();
         aggiornaPagineLette("Lunedì", 50);
         aggiornaPagineLette("Martedì", 30);
         aggiornaProgresso();
-
-
-         //Intent intent = new Intent(this, ReviewActivity.class);
-
-        //reviewActivityLauncher.launch(intent);
     }
 
     private void popolaListaLibri() {
         listaLibri.add(new Libro("Il nome della rosa", "Umberto Eco", "Un giallo storico", 500));
         listaLibri.add(new Libro("1984", "George Orwell", "Un distopico capolavoro", 328));
-        listaLibri.add(new Libro("I promessi sposi", "Alessandro Manzoni", "Un romanzo storico italiano", 720));
-        listaLibri.add(new Libro("Moby Dick", "Herman Melville", "La caccia alla balena bianca", 635));
-        listaLibri.add(new Libro("Orgoglio e pregiudizio", "Jane Austen", "Un romanzo sull'amore e le convenzioni sociali", 432));
-        listaLibri.add(new Libro("Il grande Gatsby", "F. Scott Fitzgerald", "Un ritratto della società americana degli anni '20", 180));
-        listaLibri.add(new Libro("Delitto e castigo", "Fëdor Dostoevskij", "Un'esplorazione della moralità e della redenzione", 671));
-        listaLibri.add(new Libro("Cime tempestose", "Emily Brontë", "Una storia di amore e vendetta", 416));
-        listaLibri.add(new Libro("Il processo", "Franz Kafka", "Un'analisi dell'assurdità della burocrazia", 304));
-        listaLibri.add(new Libro("Il conte di Montecristo", "Alexandre Dumas", "Una storia di vendetta e redenzione", 1276));
-
+        // Aggiungi altri libri...
     }
 
     private void inizializzaGiorni() {
@@ -105,10 +91,11 @@ public class MainActivity extends AppCompatActivity {
         textViewPercentage.setText(percentuale + "%");
     }
 
-    private void aggiungiRecensione(String recensione) {
-
+    private void aggiungiRecensione(String recensione, float rating) {
         if (!listaLibri.isEmpty()) {
-            listaLibri.get(0).setRecensione(recensione); // Assicurati che il metodo setRecensione esista nella classe Libro
+            Libro libro = listaLibri.get(0);  // Modifica come necessario per ottenere il libro corretto
+            libro.setRecensione(recensione);
+            libro.setValutazione(rating);
         }
         adapter.notifyDataSetChanged();
     }

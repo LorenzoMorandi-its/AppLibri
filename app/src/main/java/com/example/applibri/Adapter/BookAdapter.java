@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.BaseAdapter;
 
@@ -49,10 +50,12 @@ public class BookAdapter extends BaseAdapter {
         TextView titleTextView = convertView.findViewById(R.id.textViewTitle);
         TextView authorTextView = convertView.findViewById(R.id.textViewAuthor);
         Button reviewButton = convertView.findViewById(R.id.buttonReview);
+        RatingBar ratingBar = convertView.findViewById(R.id.ratingBar);
 
         Libro libro = listaLibri.get(position);
         titleTextView.setText(libro.getTitolo());
         authorTextView.setText(libro.getAutore());
+        ratingBar.setRating(libro.getValutazione());
 
         reviewButton.setOnClickListener(v -> {
             Intent intent = new Intent(context, ReviewActivity.class);
